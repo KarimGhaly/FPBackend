@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.fpbackend.FinanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spSetSpinnerConsultant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <EditText
+            android:id="@+id/etAddFinance_totalHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Total Hours"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_holidayHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Holiday Hours"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_pto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PTO Hours"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_overtimeHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Overtime Hours"
+            android:inputType="numberDecimal" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pay Rate"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_hourlyRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hourly Rate"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_overtimeRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Overtime Rate"
+            android:inputType="numberDecimal" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Taxes"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_federalTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Federal Tax"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_stateTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="State Tax"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_socialSecurityTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Social Security Tax"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_medicareTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medicare Tax"
+            android:inputType="numberDecimal" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Insurance"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_medicalInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medical Insurance"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_visionInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vision Insurance"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_dentalInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dental Insurance"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_shortTermDisabilityInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Short Term Disability Insurance"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_longTermDisabilityInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Long Term Disability Insurance"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_lifeInsurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Life Insurance"
+            android:inputType="numberDecimal" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Extra"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_expensePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expense Pay"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_advancePay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Advance Pay"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etAddFinance_advanceDeduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Advances Deduction"
+            android:inputType="numberDecimal" />
+
+        <!--.................................................-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dates"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/etAddFinance_dateFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date From: MM/DD/YYYY"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etAddFinance_dateTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date To: MM/DD/YYYY"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/etAddFinance_payDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pay Date: MM/DD/YYYY"
+            android:inputType="date" />
+
+        <!--.................................................-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addFinance"
+            android:text="Add Finance Info" />
+
+
+    </LinearLayout>
+
+</ScrollView>

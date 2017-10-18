@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.fpbackend.HousingActivity.HousingActivity">
+    <Spinner
+        android:padding="10dp"
+        android:id="@+id/spinnerSetHousing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    </Spinner>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:onClick="AddNewHousing"
+        android:text="Add New Housing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="150dp"
+        android:onClick="SetHousing"
+        android:text="Choose Housing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

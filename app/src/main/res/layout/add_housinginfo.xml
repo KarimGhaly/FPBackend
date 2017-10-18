@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/txtAddHousing_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="House ID" />
+    <EditText
+        android:gravity="center"
+        android:id="@+id/txtAddHousing_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="House Name" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_numBedroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Num Bedrooms"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_numBathroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Num Bathroom"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_buildingManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Building Manager" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_buildingManagerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Building Manager Phone #"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_gateCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gate Code"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_lockCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lock Code"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitude"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/txtAddHousing_lng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Long"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SaveHousing"
+        android:text="Save" />
+</LinearLayout>

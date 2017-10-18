@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "516690301354",
+    "firebase_url": "https://mac-db.firebaseio.com",
+    "project_id": "mac-db",
+    "storage_bucket": "mac-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516690301354:android:d097a15bcedc8f0d",
+        "android_client_info": {
+          "package_name": "com.example.admin.fpbackend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516690301354-ota3edj9m0pttl3fu0jo1atnjskl98fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.fpbackend",
+            "certificate_hash": "00e8806c02e9f68a2d47b2e17a6194c9945eb56f"
+          }
+        },
+        {
+          "client_id": "516690301354-cfholmcpjgf5h9k12vk20mielgk4d0qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin.fpbackend",
+            "certificate_hash": "2a1fe0e153698c944f9d9d4afe0eb9535266fd83"
+          }
+        },
+        {
+          "client_id": "516690301354-tpeb6rqhl30v54emp9n90156ukim9076.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDacA7tdf0va7qRkW0iFAvq3p1WRv1XTrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516690301354-tpeb6rqhl30v54emp9n90156ukim9076.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
