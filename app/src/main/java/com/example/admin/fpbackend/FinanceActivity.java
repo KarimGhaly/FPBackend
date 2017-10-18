@@ -213,7 +213,7 @@ public class FinanceActivity extends AppCompatActivity {
         payslibe.setAdvancesPay(Float.valueOf(etAddFinanceAdvancePay.getText().toString()));
         payslibe.setAdvancesDeduction(Float.valueOf(etAddFinanceAdvanceDeduction.getText().toString()));
 
-        SimpleDateFormat df = new SimpleDateFormat("mm/dd/yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         try {
             payslibe.setFrom(df.parse(etAddFinanceDateFrom.getText().toString()));
         } catch (ParseException e) {
