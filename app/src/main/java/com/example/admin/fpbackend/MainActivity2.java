@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.admin.fpbackend.Benfits.Benfits;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -32,5 +33,10 @@ public class MainActivity2 extends AppCompatActivity {
         DatabaseReference ref = database.getReference("Consultants_Records")
                 .child("7TI8mD1R0aTiB5duvvlxBuOvXot1").child("Training Phase").child("Finance").child("Pay Slips");
         ref.removeValue();
+    }
+
+    public void AddBenfits(View view) {
+        Intent intent = new Intent(this, Benfits.class);
+        startActivity(intent);
     }
 }

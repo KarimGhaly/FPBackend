@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.admin.fpbackend.Benfits.Benfits">
+
+        <Spinner
+            android:id="@+id/spSetSpinnerConsultant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Button
+            android:id="@+id/btnSelectConsultant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="SelectConsultant"
+            android:text="Select Consultant" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etPtoInput_totalPto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Pto"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etPtoInput_usedPto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Used Pto"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etPtoInput_remainingPto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Remaining Pto"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnSubmitPtoInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SavePTOs"
+                android:enabled="false"
+                android:text="Save Pto Info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerInsuranceInput_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/InsuranceType_array"/>
+
+            <EditText
+                android:id="@+id/etInsuranceInput_companyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name" />
+
+            <EditText
+                android:id="@+id/etInsuranceInput_packageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Package Name" />
+
+            <EditText
+                android:id="@+id/etInsuranceInput_packageDetailsUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Package Details URL" />
+
+            <Button
+                android:text="Add to Insurance List"
+                android:onClick="addToList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/BenfitsRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            <Button
+                android:onClick="SaveInsuranceinDB"
+                android:id="@+id/btnInsertInsurance_submitInsurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Submit Insurance" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
