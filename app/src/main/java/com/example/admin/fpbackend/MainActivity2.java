@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.admin.fpbackend.Benfits.Benfits;
+import com.example.admin.fpbackend.Training.AddAssignment;
+import com.example.admin.fpbackend.Training.GradeAssignment;
+import com.example.admin.fpbackend.marketing.AddInterviews;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,6 +40,21 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void AddBenfits(View view) {
         Intent intent = new Intent(this, Benfits.class);
+        startActivity(intent);
+    }
+
+    public void AddAssignemnt(View view) {
+        Intent intent = new Intent(this, AddAssignment.class);
+        startActivity(intent);
+    }
+
+    public void GradeAssignemnt(View view) {
+        Intent intent = new Intent(this, GradeAssignment.class);
+        startActivity(intent);
+    }
+
+    public void AddInterview(View view) {
+        Intent intent = new Intent(this, AddInterviews.class);
         startActivity(intent);
     }
 }

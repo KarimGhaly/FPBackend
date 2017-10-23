@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.fpbackend.marketing.AddInterviews">
+
+    <Spinner
+        android:id="@+id/spInterview_SetConsultant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <EditText
+        android:id="@+id/etInterview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date: MM/DD/YYYY"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time: HH:min"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_interviewerNames"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Interviewer Name(s): name, ..."
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_clientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Client Name"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_vendorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vendor Client"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_projectCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Project City"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_projectState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Project State"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_projectDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Project Duration"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_availabilityDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Availability Date"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etInterview_clientWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Client Website"
+        android:paddingBottom="5dp" />
+
+    <Button
+        android:id="@+id/btnInputInterviewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Interview Info"/>
+</LinearLayout>

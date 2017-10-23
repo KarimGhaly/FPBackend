@@ -26,4 +26,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <Button
+        android:onClick="AddAssignemnt"
+        android:text="Add new Assignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="GradeAssignemnt"
+        android:text="Grade Assignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="AddInterview"
+        android:text="Add Interview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

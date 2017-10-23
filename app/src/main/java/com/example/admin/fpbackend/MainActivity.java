@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void AddtoDB(View view) {
         final ConsultantInfoClass consultant = new ConsultantInfoClass();
-        consultant.setID(Integer.parseInt(txtAddID.getText().toString()));
+        consultant.setId(Integer.parseInt(txtAddID.getText().toString()));
         consultant.setFirstName(txtAddFirstName.getText().toString());
         consultant.setLastName(txtAddLastName.getText().toString());
         consultant.setEmail(txtAddEmail.getText().toString());

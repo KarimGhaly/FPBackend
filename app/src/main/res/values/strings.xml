@@ -20,4 +20,5 @@
         <item>Long Term Disability Insurance</item>
         <item>Life Insurance</item>
     </string-array>
+    <string name="title_activity_traing">TraingActivity</string>
 </resources>

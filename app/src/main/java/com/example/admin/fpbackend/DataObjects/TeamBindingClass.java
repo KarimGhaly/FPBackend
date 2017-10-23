@@ -8,6 +8,9 @@ public class TeamBindingClass {
     String teamRefrence;
     String consultantRefrence;
 
+    public TeamBindingClass() {
+    }
+
     public String getTeamRefrence() {
         return teamRefrence;
     }

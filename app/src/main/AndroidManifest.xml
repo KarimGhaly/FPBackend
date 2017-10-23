@@ -22,7 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".FinanceActivity" />
-        <activity android:name=".Benfits.Benfits"></activity>
+        <activity android:name=".Benfits.Benfits" />
+        <activity android:name=".Training.AddAssignment" />
+        <activity android:name=".Training.GradeAssignment" />
+        <activity android:name=".marketing.AddInterviews"></activity>
     </application>
 
 </manifest>

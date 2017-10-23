@@ -19,11 +19,12 @@ public class ConsultantInfoClass {
     String refrence;
     String email;
     String skype;
+    String uid;
 
     public ConsultantInfoClass() {
     }
 
-    public ConsultantInfoClass(int id, String firstName, String lastName, String address, String phoneNo, String emergencyName, String emergencyPhone, Date joinDate, String technology, String refrence, String email, String skype) {
+    public ConsultantInfoClass(int id, String firstName, String lastName, String address, String phoneNo, String emergencyName, String emergencyPhone, Date joinDate, String technology, String refrence, String email, String skype, String uid) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,15 +37,27 @@ public class ConsultantInfoClass {
         this.refrence = refrence;
         this.email = email;
         this.skype = skype;
+        this.uid = uid;
     }
 
-    public int getID() {
+    public int getId() {
         return id;
     }
 
-    public void setID(int ID) {
-        this.id = ID;
+    public void setId(int id) {
+        this.id = id;
     }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+
+
 
     public String getFirstName() {
         return firstName;
