@@ -17,11 +17,12 @@ public class InterviewInfoClass {
     private String availabilityDate;
     private String clientWebsite;
     private String pdfMoreDetailsLink;
+    private String mentor;
 
     public InterviewInfoClass() {
     }
 
-    public InterviewInfoClass(String interviewTitle, Date interviewDateTime, String interviewName, String clientName, String vendorName, String projectCityState, String projectDuration, String availabilityDate, String clientWebsite, String pdfMoreDetailsLink) {
+    public InterviewInfoClass(String interviewTitle, Date interviewDateTime, String interviewName, String clientName, String vendorName, String projectCityState, String projectDuration, String availabilityDate, String clientWebsite, String pdfMoreDetailsLink, String mentor) {
         this.interviewTitle = interviewTitle;
         this.interviewDateTime = interviewDateTime;
         this.interviewName = interviewName;
@@ -32,6 +33,7 @@ public class InterviewInfoClass {
         this.availabilityDate = availabilityDate;
         this.clientWebsite = clientWebsite;
         this.pdfMoreDetailsLink = pdfMoreDetailsLink;
+        this.mentor = mentor;
     }
 
     public String getInterviewTitle() {
@@ -112,5 +114,13 @@ public class InterviewInfoClass {
 
     public void setPdfMoreDetailsLink(String pdfMoreDetailsLink) {
         this.pdfMoreDetailsLink = pdfMoreDetailsLink;
+    }
+
+    public String getMentor() {
+        return mentor;
+    }
+
+    public void setMentor(String mentor) {
+        this.mentor = mentor;
     }
 }

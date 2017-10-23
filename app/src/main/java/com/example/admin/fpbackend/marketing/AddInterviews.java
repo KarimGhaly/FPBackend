@@ -67,6 +67,8 @@ public class AddInterviews extends AppCompatActivity {
     ArrayAdapter<String> consultantAdapter;
     @BindView(R.id.etInterview_pdfLink)
     EditText etInterviewPdfLink;
+    @BindView(R.id.etInterview_mentorName)
+    EditText etInterviewMentorName;
 
 
     @Override
@@ -138,7 +140,7 @@ public class AddInterviews extends AppCompatActivity {
                     etInterviewVendorName.getText().toString(), etInterviewVendorName.getText().toString(),
                     etInterviewProjectCity.getText().toString() + ", " + etInterviewProjectState.getText().toString(),
                     etInterviewProjectDuration.getText().toString(), etInterviewAvailabilityDate.getText().toString(),
-                    etInterviewClientWebsite.getText().toString(), etInterviewPdfLink.getText().toString());
+                    etInterviewClientWebsite.getText().toString(), etInterviewPdfLink.getText().toString(),etInterviewMentorName.getText().toString());
             InterviewRef.child(UID).child("Training Phase").child("Interviews").child("Upcoming Interviews").push().setValue(interview, new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {

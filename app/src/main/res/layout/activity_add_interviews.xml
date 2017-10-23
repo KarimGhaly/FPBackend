@@ -37,6 +37,13 @@
         android:paddingBottom="5dp" />
 
     <EditText
+        android:id="@+id/etInterview_mentorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mentor"
+        android:paddingBottom="5dp" />
+
+    <EditText
         android:id="@+id/etInterview_interviewerNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
