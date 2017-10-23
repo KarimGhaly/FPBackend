@@ -11,14 +11,16 @@ public class TodayAssigmentInfoClass {
     String title;
     String description;
     Date dueDate;
+    String sylbusLink;
 
     public TodayAssigmentInfoClass() {
     }
 
-    public TodayAssigmentInfoClass(String title, String description, Date dueDate) {
+    public TodayAssigmentInfoClass(String title, String description, Date dueDate, String sylbusLink) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
+        this.sylbusLink = sylbusLink;
     }
 
     public String getTitle() {
@@ -43,5 +45,13 @@ public class TodayAssigmentInfoClass {
 
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public String getSylbusLink() {
+        return sylbusLink;
+    }
+
+    public void setSylbusLink(String sylbusLink) {
+        this.sylbusLink = sylbusLink;
     }
 }

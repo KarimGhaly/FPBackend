@@ -16,11 +16,12 @@ public class InterviewInfoClass {
     private String projectDuration;
     private String availabilityDate;
     private String clientWebsite;
+    private String pdfMoreDetailsLink;
 
     public InterviewInfoClass() {
     }
 
-    public InterviewInfoClass(String interviewTitle, Date interviewDateTime, String interviewName, String clientName, String vendorName, String projectCityState, String projectDuration, String availabilityDate, String clientWebsite) {
+    public InterviewInfoClass(String interviewTitle, Date interviewDateTime, String interviewName, String clientName, String vendorName, String projectCityState, String projectDuration, String availabilityDate, String clientWebsite, String pdfMoreDetailsLink) {
         this.interviewTitle = interviewTitle;
         this.interviewDateTime = interviewDateTime;
         this.interviewName = interviewName;
@@ -30,6 +31,7 @@ public class InterviewInfoClass {
         this.projectDuration = projectDuration;
         this.availabilityDate = availabilityDate;
         this.clientWebsite = clientWebsite;
+        this.pdfMoreDetailsLink = pdfMoreDetailsLink;
     }
 
     public String getInterviewTitle() {
@@ -102,5 +104,13 @@ public class InterviewInfoClass {
 
     public void setClientWebsite(String clientWebsite) {
         this.clientWebsite = clientWebsite;
+    }
+
+    public String getPdfMoreDetailsLink() {
+        return pdfMoreDetailsLink;
+    }
+
+    public void setPdfMoreDetailsLink(String pdfMoreDetailsLink) {
+        this.pdfMoreDetailsLink = pdfMoreDetailsLink;
     }
 }

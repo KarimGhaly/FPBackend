@@ -2,7 +2,6 @@ package com.example.admin.fpbackend.Training;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,9 +53,11 @@ public class AddAssignment extends AppCompatActivity {
     DatabaseReference TrainingRef;
 
     List<String> consultantList = new ArrayList<>();
-    Map<String,String> teamKey = new HashMap<>();
+    Map<String, String> teamKey = new HashMap<>();
 
     ArrayAdapter<String> spAdapter;
+    @BindView(R.id.etTodayAssignment_SylbusLINK)
+    EditText etTodayAssignmentSylbusLINK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,20 +70,19 @@ public class AddAssignment extends AppCompatActivity {
         TeamBinding = database.getReference("Data_Binding").child("Teams_Consult");
         ConsultantRef = database.getReference("Consultant_Information");
         TrainingRef = database.getReference("Consultants_Records");
-        spAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        spAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         getTeams();
     }
 
-    public void getTeams(){
+    public void getTeams() {
         TeamRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 spAdapter.clear();
                 teamKey.clear();
-                for(DataSnapshot D: dataSnapshot.getChildren())
-                {
+                for (DataSnapshot D : dataSnapshot.getChildren()) {
                     spAdapter.add(D.getValue(String.class));
-                    teamKey.put(D.getValue(String.class),D.getKey());
+                    teamKey.put(D.getValue(String.class), D.getKey());
                 }
                 spAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spTodayAssignmentSetTeam.setAdapter(spAdapter);
@@ -106,8 +106,7 @@ public class AddAssignment extends AppCompatActivity {
         TeamBinding.orderByChild("teamRefrence").equalTo(team_key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(final DataSnapshot D: dataSnapshot.getChildren())
-                {
+                for (final DataSnapshot D : dataSnapshot.getChildren()) {
                     ConsultantRef.child(D.getValue(TeamBindingClass.class).getConsultantRefrence()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -137,26 +136,24 @@ public class AddAssignment extends AppCompatActivity {
     @OnClick(R.id.btnSubmit)
     public void onBtnSubmitClicked() {
 
-        if(!etTodayAssignmentTitle.getText().toString().isEmpty() && !etTodayAssignmentDescription.getText().toString().isEmpty())
-        {
+        if (!etTodayAssignmentTitle.getText().toString().isEmpty() && !etTodayAssignmentDescription.getText().toString().isEmpty()) {
             TodayAssigmentInfoClass asignment = new TodayAssigmentInfoClass();
             asignment.setTitle(etTodayAssignmentTitle.getText().toString());
             asignment.setDescription(etTodayAssignmentDescription.getText().toString());
+            asignment.setSylbusLink(etTodayAssignmentSylbusLINK.getText().toString());
             SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
             try {
                 asignment.setDueDate(sdf.parse(etTodayAssignmentDueDate.getText().toString()));
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            for(String uid: consultantList)
-            {
+            for (String uid : consultantList) {
                 TrainingRef.child(uid).child("Training Phase").child("Training").child("Assignments").push().setValue(asignment);
 
             }
             Toast.makeText(this, "Assignment Added Succesfully to the Team", Toast.LENGTH_SHORT).show();
 
-        }
-        else {
+        } else {
             Toast.makeText(this, "Please Insert Assignmet Title & Description", Toast.LENGTH_SHORT).show();
         }
     }

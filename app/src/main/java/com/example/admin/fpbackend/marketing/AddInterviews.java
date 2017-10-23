@@ -65,6 +65,8 @@ public class AddInterviews extends AppCompatActivity {
     String UID;
     HashMap<String, String> ConsultantUID = new HashMap<String, String>();
     ArrayAdapter<String> consultantAdapter;
+    @BindView(R.id.etInterview_pdfLink)
+    EditText etInterviewPdfLink;
 
 
     @Override
@@ -76,7 +78,7 @@ public class AddInterviews extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         ConsultantRef = database.getReference("Consultant_Information");
         InterviewRef = database.getReference("Consultants_Records");
-        consultantAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        consultantAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         getConsultants();
     }
 
@@ -112,7 +114,8 @@ public class AddInterviews extends AppCompatActivity {
         insertInterviewToDB();
 
     }
-    public void insertInterviewToDB(){
+
+    public void insertInterviewToDB() {
 
         DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm");
         boolean flag = true;
@@ -129,23 +132,21 @@ public class AddInterviews extends AppCompatActivity {
             flag = false;
         }
 
-        if(flag) {
+        if (flag) {
             InterviewInfoClass interview = new InterviewInfoClass(etInterviewTitle.getText().toString(),
                     interviewCalendar.getTime(), etInterviewInterviewerNames.getText().toString(),
                     etInterviewVendorName.getText().toString(), etInterviewVendorName.getText().toString(),
                     etInterviewProjectCity.getText().toString() + ", " + etInterviewProjectState.getText().toString(),
                     etInterviewProjectDuration.getText().toString(), etInterviewAvailabilityDate.getText().toString(),
-                    etInterviewClientWebsite.getText().toString());
+                    etInterviewClientWebsite.getText().toString(), etInterviewPdfLink.getText().toString());
             InterviewRef.child(UID).child("Training Phase").child("Interviews").child("Upcoming Interviews").push().setValue(interview, new DatabaseReference.CompletionListener() {
                 @Override
                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                    if(databaseError == null)
-                    {
+                    if (databaseError == null) {
                         Toast.makeText(AddInterviews.this, "Interview Added Successfully", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                    } else {
                         Toast.makeText(AddInterviews.this, "Error", Toast.LENGTH_SHORT).show();
-                        Log.d(TAG, "onComplete: "+databaseError.getMessage());
+                        Log.d(TAG, "onComplete: " + databaseError.getMessage());
                     }
                 }
             });
